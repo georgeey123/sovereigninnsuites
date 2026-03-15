@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "Sovereign Inn Suites — Comfort & Hospitality in Koforidua, Ghana",
   description:
     "Sovereign Inn Suites offers a quiet and welcoming retreat in Koforidua, Eastern Region of Ghana. Spacious rooms, complimentary WiFi, ample parking, and thoughtful hospitality.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
