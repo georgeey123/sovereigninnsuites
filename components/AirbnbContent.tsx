@@ -15,10 +15,10 @@ const galleryImages = [
 ];
 
 const apartment = {
-  name: "3-Bedroom Apartment",
-  description: "A spacious three-bedroom apartment offering ample space for families, groups, or extended stays. Enjoy the comfort of a fully equipped home in the heart of Accra.",
-  guests: "Up to 6 guests",
-  features: ["3 Bedrooms", "Full Kitchen", "Living Room", "WiFi", "Air Conditioning", "Parking"],
+   name: "Modern 1, 2, and 3-Bedroom En-Suite Apartments",
+   description: "Sovereign Inn Suites Accra offers modern 1, 2, and 3-bedroom en-suite apartments located in a quiet and secure gated community in East Airport.",
+   guests: "Various configurations available",
+   features: ["Spacious king-size bedrooms with private en-suite bathrooms", "Fully air-conditioned apartments", "Large modern kitchen fully equipped with appliances and utensils", "Bright, spacious living areas", "24/7 security surveillance in a gated community", "Perfect for individuals, families, business travelers, or long stays"],
 };
 
 // Placeholder - replace with actual Airbnb listing URL
@@ -37,17 +37,15 @@ export default function AirbnbContent() {
         </div>
 
         <div className="relative z-10 text-center px-8 max-w-[1280px] mx-auto w-full">
-          <p className="uppercase text-[11px] tracking-[0.4em] text-gold mb-6 font-medium">
-            Accra, Ghana
-          </p>
-          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide text-white mb-6 leading-[1.1]">
-            Accra Apartments
-          </h1>
-          <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed text-base md:text-lg">
-            Experience the comfort of home in the heart of Accra. Our beautifully 
-            furnished apartments offer the perfect base for exploring Ghana&apos;s 
-            vibrant capital city.
-          </p>
+           <p className="uppercase text-[11px] tracking-[0.4em] text-gold mb-6 font-medium">
+             Accra, Ghana
+           </p>
+           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide text-white mb-6 leading-[1.1]">
+             Sovereign Inn Suites Accra
+           </h1>
+           <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed text-base md:text-lg">
+             Looking for a comfortable and secure place to stay in Accra for your short and medium term needs? Sovereign Inn Suites Accra offers modern 1, 2, and 3-bedroom en-suite apartments located in a quiet and secure gated community in East Airport.
+           </p>
           <a
             href={AIRBNB_LISTING_URL}
             target="_blank"
@@ -85,18 +83,28 @@ export default function AirbnbContent() {
                 Ghana&apos;s Capital
               </h2>
               <div className="w-12 h-px bg-gold mb-8" />
-              <p className="text-[#666666] leading-relaxed mb-6">
-                Located in a prime area of Accra, our apartments provide the perfect 
-                blend of comfort and convenience. Whether you&apos;re visiting for business, 
-                leisure, or an extended stay, you&apos;ll find everything you need for a 
-                memorable experience.
-              </p>
-              <p className="text-[#666666] leading-relaxed mb-8">
-                Each apartment is thoughtfully furnished with modern amenities, 
-                fully equipped kitchens, and comfortable living spaces. Enjoy the 
-                freedom and privacy of your own space while having access to all 
-                the attractions Accra has to offer.
-              </p>
+               <p className="text-[#666666] leading-relaxed mb-6">
+                 📍 Prime Location
+                 <br />
+                 Only 8 minutes from Accra International Airport on clear day.
+                 <br />
+                 2–5 minutes drive to Melcom Mall, China Mall, Accra Mall, Accra Palace Mall and several great restaurants
+               </p>
+               <p className="text-[#666666] leading-relaxed mb-8">
+                 🏡 Apartment Features
+                 <br />
+                 Spacious king-size bedrooms with private en-suite bathrooms
+                 <br />
+                 Fully air-conditioned apartments
+                 <br />
+                 Large modern kitchen fully equipped with appliances and utensils
+                 <br />
+                 Bright, spacious living areas
+                 <br />
+                 24/7 security surveillance in a gated community
+                 <br />
+                 Perfect for individuals, families, business travelers, or long stays.
+               </p>
               
               {/* Quick Features */}
               <div className="grid grid-cols-2 gap-4">
