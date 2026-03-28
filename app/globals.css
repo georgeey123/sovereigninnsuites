@@ -15,17 +15,17 @@
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
 
-  --brand-red: #8b0000;
+  --brand-red: #5a4030;
   --brand-gold: #d4af37;
   --brand-gold-light: #f4e4bc;
   --brand-white: #ffffff;
-  --primary-red: #8b0000;
+  --primary-red: #5a4030;
   --primary-gold: #d4af37;
   --off-white: #fcfafa;
   --gold-finish: #d4af37;
   --bg-cream: #fdfcfb;
   --accent-gold: #c5a059;
-  --primary: #b31b1b;
+  --primary: #5a4030;
   --accent: #c5a059;
   --background-light: #ffffff;
   --secondary-dark: #1a1a1a;
@@ -37,7 +37,7 @@
 @theme {
   --color-gold: #d4af37;
   --color-gold-dark: #c5a059;
-  --color-primary-red: #8b0000;
+  --color-primary-red: #5a4030;
   --color-cream: #fdfcfb;
   --color-warm-bg: #fdfbf7;
 }
@@ -140,7 +140,7 @@ input[type="date"]::-moz-calendar-picker-indicator {
 }
 
 .bg-accent-red\/90 {
-  background-color: rgba(179, 27, 27, 0.9);
+  background-color: rgba(90, 64, 48, 0.9);
 }
 
 .border-accent {
