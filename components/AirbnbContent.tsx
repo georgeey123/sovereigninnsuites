@@ -49,7 +49,7 @@ export default function AirbnbContent() {
              Sovereign Inn Suites Accra
            </h1>
            <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed text-base md:text-lg">
-             Looking for a comfortable and secure place to stay in Accra for your short and medium term needs? Sovereign Inn Suites Accra offers modern 1, 2, and 3-bedroom en-suite apartments located in a quiet and secure gated community in East Airport.
+             Looking for a comfortable and secure place to stay in Accra for your short and medium term needs? Sovereign Inn Suites Accra offers modern 1-5 bedroom (configurable) en-suite apartments located in a quiet and secure gated community in East Airport.
            </p>
           <a
             href={AIRBNB_LISTING_URL}
