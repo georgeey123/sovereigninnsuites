@@ -6,8 +6,28 @@ const roomTypes = ["All Rooms", "King Room", "One-Bedroom Apartment"];
 
 export default function Hero() {
   const [roomType, setRoomType] = useState("All Rooms");
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
   const [adults, setAdults] = useState("2");
   const [children, setChildren] = useState("0");
+
+  const formatDate = (dateStr: string) => {
+    if (!dateStr) return "TBD";
+    const date = new Date(dateStr + "T00:00:00");
+    return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  };
+
+  const handleCheckAvailability = () => {
+    const subject = "Booking Inquiry";
+    const body = `Room Type: ${roomType}
+Check-in: ${formatDate(checkIn)}
+Check-out: ${formatDate(checkOut)}
+Adults: ${adults}
+Children: ${children}
+
+Please check availability for my requested dates.`;
+    window.location.href = `mailto:info@sovereigninnsuites.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -78,7 +98,9 @@ export default function Hero() {
               <input
                 id="hero-checkin"
                 type="date"
-                className="bg-transparent text-[#1a1a1a] text-base font-medium focus:outline-none w-full px-2 py-1.5"
+                value={checkIn}
+                onChange={(e) => setCheckIn(e.target.value)}
+                className="bg-transparent text-[#1a1a1a] text-xs font-medium focus:outline-none w-full px-1 py-2"
               />
             </div>
             
@@ -90,7 +112,9 @@ export default function Hero() {
               <input
                 id="hero-checkout"
                 type="date"
-                className="bg-transparent text-[#1a1a1a] text-base font-medium focus:outline-none w-full px-2 py-1.5"
+                value={checkOut}
+                onChange={(e) => setCheckOut(e.target.value)}
+                className="bg-transparent text-[#1a1a1a] text-xs font-medium focus:outline-none w-full px-1 py-2"
               />
             </div>
             
@@ -134,12 +158,12 @@ export default function Hero() {
             
             {/* Check Availability Button */}
             <div className="col-span-2 md:col-span-3 lg:col-span-1 flex justify-end px-2">
-              <a 
-                href="mailto:info@sovereigninnsuites.com?subject=Booking Inquiry&body=Room Type: King Room%0ACheck-in: %0ACheck-out: %0AAdults: 2%0AChildren: 0%0A%0APlease check availability for my requested dates."
+              <button 
+                onClick={handleCheckAvailability}
                 className="w-full lg:w-auto bg-primary-red hover:bg-primary-red/90 text-white text-[10px] uppercase tracking-[0.15em] font-semibold px-4 py-2.5 rounded-lg transition-colors duration-300 text-center"
               >
                 Check Availability
-              </a>
+              </button>
             </div>
           </div>
         </div>
