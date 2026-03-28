@@ -22,6 +22,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.svg",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sovereign Inn Suites",
+    description: "Comfort & Hospitality in Koforidua, Ghana",
+  },
+  openGraph: {
+    title: "Sovereign Inn Suites",
+    description: "Comfort & Hospitality in Koforidua, Ghana",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
