@@ -32,15 +32,27 @@ export default function ReservationCTA() {
         {/* Thin gold divider */}
         <div className="w-16 h-px bg-gold/60 mx-auto mb-10" />
         
-        <a
-          href="mailto:info@sovereigninnsuites.com?subject=Booking Inquiry&body=Hello,%0A%0AI would like to make a reservation at Sovereign Inn Suites.%0A%0ARoom Type: %0ACheck-in Date: %0ACheck-out Date: %0ANumber of Adults: %0ANumber of Children: %0A%0APlease let me know availability and rates.%0A%0AThank you."
-          className="inline-flex items-center bg-gold hover:bg-gold-dark text-white text-[12px] uppercase tracking-[0.25em] font-semibold px-10 py-4 transition-colors duration-300 gap-2"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          Book via Email
-        </a>
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="mailto:info@sovereigninnsuites.com?subject=Booking Inquiry&body=Hello,%0A%0AI would like to make a reservation at Sovereign Inn Suites.%0A%0ARoom Type: %0ACheck-in Date: %0ACheck-out Date: %0ANumber of Adults: %0ANumber of Children: %0A%0APlease let me know availability and rates.%0A%0AThank you."
+            className="inline-flex items-center bg-gold hover:bg-gold-dark text-white text-[12px] uppercase tracking-[0.25em] font-semibold px-10 py-4 transition-colors duration-300 gap-2"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Book via Email
+          </a>
+          <a
+            href="/contact"
+            className="inline-flex items-center border border-gold text-gold hover:bg-gold hover:text-white text-[12px] uppercase tracking-[0.25em] font-semibold px-10 py-4 transition-colors duration-300 gap-2"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Fill a Form
+          </a>
+        </div>
         
         <p className="text-white/90 text-sm mt-8">
           <span className="text-gold">Email:</span> info@sovereigninnsuites.com

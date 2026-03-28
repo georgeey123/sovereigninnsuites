@@ -78,7 +78,7 @@ export default function Hero() {
               <input
                 id="hero-checkin"
                 type="date"
-                className="bg-transparent text-[#1a1a1a] text-sm focus:outline-none w-full"
+                className="bg-transparent text-[#1a1a1a] text-base font-medium focus:outline-none w-full px-2 py-1.5"
               />
             </div>
             
@@ -90,7 +90,7 @@ export default function Hero() {
               <input
                 id="hero-checkout"
                 type="date"
-                className="bg-transparent text-[#1a1a1a] text-sm focus:outline-none w-full"
+                className="bg-transparent text-[#1a1a1a] text-base font-medium focus:outline-none w-full px-2 py-1.5"
               />
             </div>
             

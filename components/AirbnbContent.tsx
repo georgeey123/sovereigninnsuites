@@ -1,27 +1,34 @@
 "use client";
 
 import { useState } from "react";
+import Carousel from "./Carousel";
 
-// Placeholder gallery items - will be replaced with actual Airbnb property photos
 const galleryImages = [
-  { id: 1, title: "Living Room", span: "col-span-2 row-span-2" },
-  { id: 2, title: "Master Bedroom", span: "" },
-  { id: 3, title: "Kitchen", span: "" },
-  { id: 4, title: "Second Bedroom", span: "" },
-  { id: 5, title: "Bathroom", span: "" },
-  { id: 6, title: "Balcony View", span: "col-span-2" },
-  { id: 7, title: "Dining Area", span: "" },
-  { id: 8, title: "Building Exterior", span: "" },
+  "/images/accra/sis_accra_estate_gate.jpeg",
+  "/images/accra/sis_accra_entrance.jpeg",
+  "/images/accra/sis_accra_upclose_entrance.jpeg",
+  "/images/accra/sis_accra_livingroom.jpeg",
+  "/images/accra/sis_accra_livingroom2.jpeg",
+  "/images/accra/sis_accra_kitchen.jpeg",
+  "/images/accra/sis_accra_dining.jpeg",
+  "/images/accra/sis_accra_dining2.jpeg",
+  "/images/accra/sis_accra_bedroom.jpeg",
+  "/images/accra/sis_accra_bedroom2.jpeg",
+  "/images/accra/sis_accra_bedroom3.jpeg",
+  "/images/accra/sis_accra_bedroom4.jpeg",
+  "/images/accra/sis_accra_shower.jpeg",
+  "/images/accra/sis_accra_shower2.jpeg",
+  "/images/accra/sis_accra_toilet.jpeg",
+  "/images/accra/sis_accra_telephone_shower.jpeg",
 ];
 
 const apartment = {
-   name: "Modern 1, 2, and 3-Bedroom En-Suite Apartments",
+   name: "Modern configurable 1-5 bedroom apartments with up to 10 guests",
    description: "Sovereign Inn Suites Accra offers modern 1, 2, and 3-bedroom en-suite apartments located in a quiet and secure gated community in East Airport.",
    guests: "Various configurations available",
    features: ["Spacious king-size bedrooms with private en-suite bathrooms", "Fully air-conditioned apartments", "Large modern kitchen fully equipped with appliances and utensils", "Bright, spacious living areas", "24/7 security surveillance in a gated community", "Perfect for individuals, families, business travelers, or long stays"],
 };
 
-// Placeholder - replace with actual Airbnb listing URL
 const AIRBNB_LISTING_URL = "https://www.airbnb.com";
 
 export default function AirbnbContent() {
@@ -29,9 +36,7 @@ export default function AirbnbContent() {
 
   return (
     <>
-      {/* Hero Section */}
       <section className="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden pt-20">
-        {/* Background */}
         <div className="absolute inset-0 bg-linear-to-br from-stone-500 via-stone-600 to-stone-700">
           <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-black/20" />
         </div>
@@ -60,19 +65,20 @@ export default function AirbnbContent() {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="py-20 bg-cream">
         <div className="max-w-[1280px] mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left: Image Placeholder */}
             <div className="relative">
-              <div className="w-full aspect-[4/3] bg-linear-to-br from-stone-300 via-stone-400 to-stone-500 rounded-lg shadow-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
+              <div className="w-full aspect-[4/3] rounded-lg shadow-2xl overflow-hidden">
+                <img
+                  src="/images/accra/sis_accra_entrance.jpeg"
+                  alt="Sovereign Inn Suites Accra Entrance"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-gold/40 -z-10" />
             </div>
 
-            {/* Right: Text */}
             <div>
               <p className="uppercase text-[11px] tracking-[0.4em] text-primary-red mb-5 font-medium">
                 About Our Accra Property
@@ -105,8 +111,7 @@ export default function AirbnbContent() {
                  <br />
                  Perfect for individuals, families, business travelers, or long stays.
                </p>
-              
-              {/* Quick Features */}
+               
               <div className="grid grid-cols-2 gap-4">
                 {["Self Check-in", "Free WiFi", "Full Kitchen", "Air Conditioning", "Free Parking", "24/7 Support"].map((feature) => (
                   <div key={feature} className="flex items-center gap-2">
@@ -120,7 +125,6 @@ export default function AirbnbContent() {
         </div>
       </section>
 
-      {/* Apartment */}
       <section className="py-20 bg-white">
         <div className="max-w-[800px] mx-auto px-8">
           <div className="text-center mb-12">
@@ -133,17 +137,14 @@ export default function AirbnbContent() {
           </div>
 
           <div className="bg-cream rounded-lg overflow-hidden shadow-lg">
-            {/* Image Placeholder */}
-            <div className="relative aspect-[16/9] bg-linear-to-br from-stone-300 via-stone-400 to-stone-500">
-              <div className="absolute inset-0 bg-black/10" />
-              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                <span className="uppercase text-[9px] tracking-[0.2em] text-primary-red font-medium">
-                  {apartment.guests}
-                </span>
-              </div>
+            <Carousel images={galleryImages} aspectRatio="aspect-[16/9]" />
+            
+            <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full z-20">
+              <span className="uppercase text-[9px] tracking-[0.2em] text-primary-red font-medium">
+                {apartment.guests}
+              </span>
             </div>
 
-            {/* Info */}
             <div className="p-8">
               <h3 className="font-playfair text-2xl font-medium text-[#1a1a1a] mb-2">
                 {apartment.name}
@@ -153,7 +154,6 @@ export default function AirbnbContent() {
                 {apartment.description}
               </p>
 
-              {/* Features */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
                 {apartment.features.map((feature) => (
                   <div key={feature} className="flex items-center gap-2">
@@ -179,7 +179,6 @@ export default function AirbnbContent() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
       <section className="py-20 bg-warm-bg">
         <div className="max-w-[1280px] mx-auto px-8">
           <div className="text-center mb-16">
@@ -194,33 +193,8 @@ export default function AirbnbContent() {
             </p>
           </div>
 
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[180px]">
-            {galleryImages.map((item) => (
-              <div
-                key={item.id}
-                onClick={() => setSelectedImage(item.id)}
-                className={`relative overflow-hidden rounded-lg cursor-pointer group ${item.span}`}
-              >
-                {/* Placeholder gradient */}
-                <div className="absolute inset-0 bg-linear-to-br from-stone-300 via-stone-400 to-stone-500 transition-transform duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
-
-                {/* Label */}
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-black/60 to-transparent">
-                  <p className="text-white text-sm font-medium">{item.title}</p>
-                </div>
-
-                {/* Hover overlay */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <Carousel images={galleryImages} aspectRatio="aspect-[16/10]" />
           </div>
 
           <div className="mt-6 text-center">
@@ -231,7 +205,6 @@ export default function AirbnbContent() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-primary-red">
         <div className="max-w-[1280px] mx-auto px-8 text-center">
           <p className="uppercase text-[11px] tracking-[0.4em] text-gold mb-5 font-medium">
@@ -266,7 +239,6 @@ export default function AirbnbContent() {
         </div>
       </section>
 
-      {/* Back to Main Site */}
       <section className="py-10 bg-cream border-t border-gold/20">
         <div className="max-w-[1280px] mx-auto px-8 text-center">
           <a

@@ -2,20 +2,21 @@
 
 import type { RefObject } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Carousel from "./Carousel";
 
 const rooms = [
   {
-    name: "King Room",
+    name: "King size room, 1 bed",
     description: "Comfortable king-size bed providing generous space for relaxation and a restful night's sleep. Ideal for couples, business travelers, or solo guests seeking extra comfort.",
     availability: "6 Available",
-    gradient: "from-stone-300 via-stone-400 to-stone-500",
+    images: ["from-stone-300 via-stone-400 to-stone-500", "from-stone-400 via-stone-500 to-stone-600", "from-amber-200 via-amber-300 to-amber-400"],
     features: ["King-size bed", "Complimentary WiFi", "Private bathroom", "Air conditioning"],
   },
   {
-    name: "One-Bedroom Apartment",
+    name: "Detached Apartment",
     description: "Perfect for extended stays or guests seeking additional space. A home-away-from-home experience with added privacy and flexibility.",
     availability: "1 Available",
-    gradient: "from-stone-400 via-stone-500 to-stone-600",
+    images: ["from-stone-400 via-stone-500 to-stone-600", "from-slate-300 via-slate-400 to-slate-500", "from-orange-200 via-orange-300 to-orange-400"],
     features: ["King-size bedroom", "Open-plan living room", "Well-sized kitchen", "Private shower & toilet"],
   },
 ];
@@ -32,7 +33,6 @@ export default function Suites() {
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <p className="uppercase text-[11px] tracking-[0.4em] text-primary-red mb-4 font-medium">
             Accommodation
@@ -47,26 +47,18 @@ export default function Suites() {
           </p>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {rooms.map((room) => (
             <div key={room.name} id={room.name === "One-Bedroom Apartment" ? "apartments" : undefined} className="group flex flex-col bg-cream rounded-lg overflow-hidden shadow-lg">
-              {/* Image Placeholder */}
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <div
-                  className={`absolute inset-0 bg-linear-to-br ${room.gradient} transition-transform duration-700 group-hover:scale-105`}
-                />
-                <div className="absolute inset-0 bg-black/10" />
-                {/* Availability tag */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                  <span className="uppercase text-[9px] tracking-[0.2em] text-primary-red font-medium">
-                    {room.availability}
-                  </span>
-                </div>
+              <Carousel images={room.images} />
+              
+              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full z-20">
+                <span className="uppercase text-[9px] tracking-[0.2em] text-primary-red font-medium">
+                  {room.availability}
+                </span>
               </div>
 
-              {/* Info */}
-              <div className="flex-1 flex flex-col p-6">
+              <div className="flex-1 flex flex-col p-6 pt-8">
                 <h3 className="font-playfair text-2xl font-medium text-[#1a1a1a] mb-2">
                   {room.name}
                 </h3>
@@ -75,7 +67,6 @@ export default function Suites() {
                   {room.description}
                 </p>
                 
-                {/* Features */}
                 <div className="grid grid-cols-2 gap-2 mb-6">
                   {room.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-2">
@@ -101,7 +92,6 @@ export default function Suites() {
           ))}
         </div>
 
-        {/* Additional Info */}
         <div className="mt-12 text-center">
           <p className="text-[#666666] text-sm">
             Guests benefit from complimentary WiFi, ample parking, and access to our large breakfast room and open outdoor spaces.

@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Rooms", href: "/#rooms" },
-  { label: "Apartments", href: "/#apartments" },
+  { label: "Rooms & Apartments", href: "/#rooms" },
   { label: "Accra Airbnb", href: "/airbnb" },
   { label: "Amenities", href: "/#amenities" },
   { label: "About Us", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Events", href: "/events" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
