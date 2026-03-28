@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -15,6 +16,12 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  
+  const isInnerPage = pathname === "/contact" || pathname === "/events";
+  const isDarkPage = pathname === "/" || pathname === "/airbnb";
+  const showLightNavbar = scrolled || isInnerPage;
+  const showWhiteText = isDarkPage && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -25,7 +32,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        showLightNavbar || !isDarkPage
           ? "bg-white/95 backdrop-blur-md border-b border-gold/20 shadow-lg"
           : "bg-transparent"
       }`}
@@ -33,9 +40,8 @@ export default function Navbar() {
       <div className="max-w-[1280px] mx-auto px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <a href="/" className="flex flex-col leading-none">
-          <span className={`font-playfair text-lg font-medium tracking-[0.15em] uppercase ${
-            scrolled ? "text-primary-red" : "text-white"
-          }`}>
+          <span className={`font-playfair text-lg font-medium tracking-[0.15em] uppercase ${showLightNavbar || !isDarkPage ? "text-primary-red" : "text-white"}`}
+              style={{ color: showWhiteText ? "#ffffff" : undefined }}>
             Sovereign Inn
           </span>
           <span className="uppercase text-[8px] tracking-[0.4em] text-gold font-medium mt-0.5">
@@ -49,11 +55,8 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className={`text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 ${
-                scrolled 
-                  ? "text-[#666666] hover:text-primary-red" 
-                  : "text-white/80 hover:text-white"
-              }`}
+              className={`text-[11px] uppercase tracking-[0.15em] transition-colors duration-300 ${showLightNavbar || !isDarkPage ? "text-[#666666]" : "text-white"} hover:text-primary-red`}
+              style={{ color: showWhiteText ? "#ffffff" : undefined }}
             >
               {link.label}
             </a>
@@ -65,7 +68,7 @@ export default function Navbar() {
           <a
             href="/#reserve"
             className={`hidden lg:inline-flex items-center border text-[11px] uppercase tracking-[0.2em] font-medium px-5 py-2 transition-all duration-300 ${
-              scrolled
+              showLightNavbar || !isDarkPage
                 ? "border-primary-red text-primary-red hover:bg-primary-red hover:text-white"
                 : "border-gold text-gold hover:bg-gold hover:text-white"
             }`}
@@ -73,7 +76,8 @@ export default function Navbar() {
             Book Now
           </a>
           <button
-            className={`lg:hidden p-2 ${scrolled ? "text-[#666666]" : "text-white/80"}`}
+            className={`lg:hidden p-2 ${showLightNavbar || !isDarkPage ? "text-[#666666]" : "text-white"}`}
+            style={{ color: showWhiteText ? "#ffffff" : undefined }}
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
           >
