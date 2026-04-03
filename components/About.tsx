@@ -16,18 +16,23 @@ export default function About() {
     >
       <div className="max-w-[1280px] mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          {/* Left: Image Placeholder */}
-          <div className="relative">
-            <div className="w-full aspect-[4/5] bg-linear-to-br from-stone-300 via-stone-400 to-stone-500 rounded-sm shadow-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6">
-                <p className="uppercase text-[9px] tracking-[0.3em] text-gold">Junction 8, Osabene</p>
-                <p className="font-playfair text-lg text-white mt-1">Koforidua</p>
-              </div>
-            </div>
-            {/* Offset accent */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold/40 -z-10" />
-          </div>
+           {/* Left: Image */}
+           <div className="relative">
+             <div className="w-full aspect-[4/5] rounded-sm shadow-2xl overflow-hidden">
+               <img
+                 src="/images/koforidua/about/sis_entrance.jpeg"
+                 alt="Sovereign Inn Suites Entrance"
+                 className="w-full h-full object-cover"
+               />
+               <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
+               <div className="absolute bottom-6 left-6">
+                 <p className="uppercase text-[9px] tracking-[0.3em] text-gold">Junction 8, Osabene</p>
+                 <p className="font-playfair text-lg text-white mt-1">Koforidua</p>
+               </div>
+             </div>
+             {/* Offset accent */}
+             <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold/40 -z-10" />
+           </div>
 
           {/* Right: Text */}
           <div>

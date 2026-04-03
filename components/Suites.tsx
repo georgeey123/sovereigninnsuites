@@ -9,14 +9,26 @@ const rooms = [
     name: "King size room, 1 bed",
     description: "Comfortable king-size bed providing generous space for relaxation and a restful night's sleep. Ideal for couples, business travelers, or solo guests seeking extra comfort.",
     availability: "6 Available",
-    images: ["from-stone-300 via-stone-400 to-stone-500", "from-stone-400 via-stone-500 to-stone-600", "from-amber-200 via-amber-300 to-amber-400"],
+    images: [
+      "/images/koforidua/main/sis_room1.jpeg",
+      "/images/koforidua/main/sis_room2_bed.jpeg",
+      "/images/koforidua/main/sis_room3_bed.jpeg",
+      "/images/koforidua/main/sis_room4_bed.jpeg",
+      "/images/koforidua/main/sis_room5_bed.jpeg",
+      "/images/koforidua/main/sis_room6_bed.jpeg"
+    ],
     features: ["King-size bed", "Complimentary WiFi", "Private bathroom", "Air conditioning"],
   },
   {
     name: "Detached Apartment",
     description: "Perfect for extended stays or guests seeking additional space. A home-away-from-home experience with added privacy and flexibility.",
     availability: "1 Available",
-    images: ["from-stone-400 via-stone-500 to-stone-600", "from-slate-300 via-slate-400 to-slate-500", "from-orange-200 via-orange-300 to-orange-400"],
+    images: [
+      "/images/koforidua/detached/sis_detached.jpeg",
+      "/images/koforidua/detached/sis_detached_kitchen.jpeg",
+      "/images/koforidua/detached/sis_detached_room.jpeg",
+      "/images/koforidua/detached/sis_detached_shower.jpeg"
+    ],
     features: ["King-size bedroom", "Open-plan living room", "Well-sized kitchen", "Private shower & toilet"],
   },
 ];

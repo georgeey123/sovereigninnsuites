@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import AirbnbContent from "@/components/AirbnbContent";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import AccraFooter from "@/components/AccraFooter";
 
 export const metadata: Metadata = {
   title: "Accra Apartments | Sovereign Inn Suites",
@@ -14,7 +14,7 @@ export default function AirbnbPage() {
     <main className="bg-white">
       <Navbar />
       <AirbnbContent />
-      <Footer />
+      <AccraFooter />
     </main>
   );
 }
