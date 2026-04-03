@@ -67,11 +67,13 @@ export default function Footer() {
             <span className="block uppercase text-[8px] tracking-[0.4em] text-gold mt-0.5">
               Suites
             </span>
-            <p className="text-[#666666] text-sm mt-4 leading-relaxed">
-              Junction 8, Osabene<br />
-              Koforidua, Eastern Region<br />
-              Ghana
-            </p>
+             <p className="text-[#666666] text-sm mt-4 leading-relaxed">
+               Junction 8, Osabene<br />
+               Koforidua, Eastern Region<br />
+               Ghana<br />
+               +233 501753255<br />
+               +233 249629700
+             </p>
           </div>
           <div className="md:text-right">
             <p className="text-xs text-[#666666] italic font-playfair mb-4">
