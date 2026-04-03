@@ -62,8 +62,9 @@ export default function AccraFooter() {
               Suites
             </span>
             <p className="text-[#666666] text-sm mt-4 leading-relaxed">
-              Manet estates, East Airport<br />
-              Accra, Ghana<br />
+              Mahogany Ave, East Airport<br />
+              Spintex - Accra <br />
+              Ghana <br />
               +233 502827372
             </p>
           </div>

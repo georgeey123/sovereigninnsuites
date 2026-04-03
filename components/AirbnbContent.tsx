@@ -48,10 +48,10 @@ export default function AirbnbContent() {
            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide text-white mb-6 leading-[1.1]">
              Sovereign Inn Suites Accra
            </h1>
-           <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed text-base md:text-lg">
-             Looking for a comfortable and secure place to stay in Accra for your short and medium term needs? Sovereign Inn Suites Accra offers modern 1-5 bedroom (configurable) en-suite apartments located in a quiet and secure gated community in East Airport.
-           </p>
-          <a
+            <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed text-base md:text-lg">
+              Looking for a comfortable and secure place to stay in Accra for your short and medium term needs? Sovereign Inn Suites Accra offers modern 1-5 bedroom (configurable) en-suite apartments located in a quiet and secure gated community in East Airport.
+            </p>
+           <a
             href={AIRBNB_LISTING_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -230,28 +230,53 @@ export default function AirbnbContent() {
             Book on Airbnb
           </a>
 
-          <p className="text-white/70 text-sm mt-6">
-            Questions? Contact us at{" "}
-            <a href="mailto:info@sovereigninnsuites.com" className="text-gold hover:underline">
-              info@sovereigninnsuites.com
-            </a>
-          </p>
-        </div>
-      </section>
+           <p className="text-white/70 text-sm mt-6">
+             Questions? Contact us at{" "}
+             <a href="mailto:info@sovereigninnsuites.com" className="text-gold hover:underline">
+               info@sovereigninnsuites.com
+             </a>
+           </p>
+         </div>
+       </section>
 
-      <section className="py-10 bg-cream border-t border-gold/20">
-        <div className="max-w-[1280px] mx-auto px-8 text-center">
-          <a
-            href="/"
-            className="inline-flex items-center text-[11px] uppercase tracking-[0.2em] text-primary-red hover:opacity-70 transition-opacity duration-300 font-medium gap-2"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to Sovereign Inn Suites (Koforidua)
-          </a>
-        </div>
-      </section>
+       {/* Location Map Section */}
+       <section className="py-20 bg-warm-bg">
+         <div className="max-w-[1280px] mx-auto px-8">
+           <div className="text-center mb-16">
+             <p className="uppercase text-[11px] tracking-[0.4em] text-primary-red mb-4 font-medium">
+               Location
+             </p>
+             <h2 className="font-playfair text-3xl md:text-4xl font-medium text-[#1a1a1a] mb-4">
+               Our Location in Accra
+             </h2>
+           </div>
+           
+           <div className="max-w-[500px] mx-auto">
+             <img
+               src="/images/accra/sis_accra_aprox_loc.jpeg"
+               alt="Approximate Location of Sovereign Inn Suites Accra"
+               className="rounded-lg shadow-lg"
+             />
+             <p className="mt-4 text-[#666666] text-sm text-center">
+               Located in East Airport, Accra near Spintex Road on Mahogany Avenue
+             </p>
+           </div>
+         </div>
+       </section>
+
+       <section className="py-10 bg-cream border-t border-gold/20">
+         <div className="max-w-[1280px] mx-auto px-8 text-center">
+           <a
+             href="/"
+             className="inline-flex items-center text-[11px] uppercase tracking-[0.2em] text-primary-red hover:opacity-70 transition-opacity duration-300 font-medium gap-2"
+           >
+             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+             </svg>
+             Back to Sovereign Inn Suites (Koforidua)
+           </a>
+         </div>
+       </section>
     </>
   );
 }
