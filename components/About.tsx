@@ -20,7 +20,7 @@ export default function About() {
            <div className="relative">
              <div className="w-full aspect-[4/5] rounded-sm shadow-2xl overflow-hidden">
                <img
-                 src="/images/koforidua/about/sis_entrance.jpeg"
+                 src="/images/koforidua/about/sis_about_page.jpeg"
                  alt="Sovereign Inn Suites Entrance"
                  className="w-full h-full object-cover"
                />
